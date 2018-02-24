@@ -5,19 +5,21 @@
     --color3: #91AAB4;
     --color4: #3E606F;
     --color5: #193441;
+    --color6: #90A6B3;
     --color-alert: #FF5349;
 }
 
 *{
     margin: 0;
     padding: 0;   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 body{
     /* background-color: #0466A8; */
     height: 100%;
-     color: var(--color1);
-    background:var(--color3);
+    color: var(--color1);
+    background:var(--color6);
 }
 
 #topHeader{
@@ -25,20 +27,36 @@ body{
     font-size: 1.1em;
     padding: 5px;
     background-color: var(--color-alert);
+    color: var(--color5);
 
     /* background-color: #F08743; */
 }
 
 header {
-    background-color: var(--color4);
+    /* background-color: var(--color4); */
     display: flex;
     justify-content: space-between;  
-    height: 85px;      
+    height: 100px;      
+
+    background: rgba(144,166,179,1);
+    background: -moz-linear-gradient(top, rgba(144,166,179,1) 0%, rgba(26,53,66,1) 25%, rgba(26,53,66,1) 75%, rgba(144,166,179,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(144,166,179,1)), color-stop(25%, rgba(26,53,66,1)), color-stop(75%, rgba(26,53,66,1)), color-stop(100%, rgba(144,166,179,1)));
+    background: -webkit-linear-gradient(top, rgba(144,166,179,1) 0%, rgba(26,53,66,1) 25%, rgba(26,53,66,1) 75%, rgba(144,166,179,1) 100%);
+    background: -o-linear-gradient(top, rgba(144,166,179,1) 0%, rgba(26,53,66,1) 25%, rgba(26,53,66,1) 75%, rgba(144,166,179,1) 100%);
+    background: -ms-linear-gradient(top, rgba(144,166,179,1) 0%, rgba(26,53,66,1) 25%, rgba(26,53,66,1) 75%, rgba(144,166,179,1) 100%);
+    background: linear-gradient(to bottom, rgba(144,166,179,1) 0%, rgba(26,53,66,1) 25%, rgba(26,53,66,1) 75%, rgba(144,166,179,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90a6b3', endColorstr='#90a6b3', GradientType=0 );
+    
 }
 
-/* .logo {
+.logo {
     width: 35%;
-    display: inline-block;
+}
+
+.logo img{
+    position: relative;
+    top: 0;
+    left: 15px;
 }
 
 .logo h2{
@@ -47,59 +65,84 @@ header {
     top: -30px;
     left: 25px;
     color: var(--color1);
-}
-*/
-
-
-.logo {
-    justify-content: space-between;    
-    position: relative;
-    left: 1.5%;
-    /* width: 35%; */
-    /* display: inline-block; */
-}
-
-.logo h2{
-    /* display: inline-block; */
-    position: relative;
-    top: -60%;
-    left: 115%;
-    color: var(--color1);
+    font-weight: 400;
 }
 
 nav {
     width: 65%;
-    padding-top: 41px;
+    padding-top: 40px;
 }
 
 nav ul{
     display: flex;
     justify-content: space-around;
     list-style: none;
+    width: 100%;
 }
 
 header nav ul li a{
-    color: var(--color1);
+    color: var(--color2);
     text-decoration: none; 
 }
 
-nav .subMenu li {
+header nav ul li a:hover{
+    color: var(--color1);
+}
+
+nav .subMenu1 li {
     display: none;
-    margin-top: 10px;
+    line-height: 15px;
+    padding: 10px;
 }
 
-nav .subMenu li:hover {
+nav .subMenu1 li:hover {
     background-color:var(--color2);
+    cursor: pointer;
 }
 
-nav .subMenu li a:hover {
+nav .subMenu1 li:hover {
     color: var(--color5);
 }
 
-nav ul .subMenu{
+nav ul .subMenu1{
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
-    position: relative;
+/* ===== ====== ====== =====*/   
+/* ===== ====== ====== =====*/ 
+position: absolute;
+==== ====== ====== =====*/
+/* ===== ====== ====== =====*/
+    width: auto;
+    background-color: rgba(0,0,0, .6);
+    text-align: center;
+}
+
+
+nav .subMenu2 li {
+    display: none;
+    line-height: 15px;
+    padding: 10px;
+}
+
+nav .subMenu2 li:hover {
+    background-color:var(--color2);
+    cursor: pointer;
+}
+
+nav .subMenu2 li:hover {
+    color: var(--color5);
+}
+
+nav ul .subMenu2{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+/* ===== ====== ====== =====*/ 
+    position: absolute;
+/* ===== ====== ====== =====*/
+    left: 78%;
+    width: auto;
     background-color: rgba(0,0,0, .6);
     text-align: center;
 }
@@ -137,9 +180,126 @@ nav ul .subMenu{
 
 .container .aboutUs{
     margin: 5px 5% 5%;
-    padding: 25px 5% 10px 5%;
+    padding: 15px 5% 10px 5%;
 }
 
 .aboutUs{
     background-color: var(--color5);
+    border-radius: 10px;    
+}
+
+.aboutUs h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color1);
+    text-decoration: underline;
+}
+
+.aboutUs p{
+    color: var(--color2);
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+@media(max-width:960px){
+    header{
+        /* height: 200px; */
+    }
+
+    .logo {
+        width: 35%;
+    }
+    
+    .logo img{
+        width: 25%;
+        position: relative;
+        top: 5px;
+        left: 95px;
+    }
+    
+    .logo h2{
+        display: block;
+        position: relative;
+        top: 5px;
+        left: 65px;
+        color: var(--color1);
+        font-size: 1.2em;
+    }
+
+    nav{
+        width: 56%;
+    }
+
+
+    .container .sampleProducts{
+        margin: 15px 40px;
+    }
+    
+
+    .container .sampleProducts div{
+        display: flex;    
+        flex-direction: column;
+        /* justify-content: space-between;     */
+        align-items: center;
+    }
+    
+    
+    .container .sampleProducts img{
+        margin-bottom: 15px;
+        width: 105%;
+        height: 105%;
+        border-radius: 10px;
+    }
+
+
+
+.container .aboutUs{
+    margin: 5px 5% 5%;
+    padding: 15px 5% 10px 5%;
+}
+
+.aboutUs{
+    background-color: var(--color5);
+    border-radius: 10px;    
+}
+
+.aboutUs h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color1);
+    text-decoration: underline;
+}
+
+.aboutUs p{
+    color: var(--color2);
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+
+
+}
+
+
+@media(max-width:480px){
+    nav li:nth-child(-n+2){
+        display: none;
+    }
+
+    nav {
+        padding-top: 30px;   
+    }
+
+    
+    nav ul .subMenu2{
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 38%;
+        width: auto;
+        background-color: rgba(0,0,0, .6);
+        text-align: center;
+    }
+
 }
