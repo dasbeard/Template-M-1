@@ -7,14 +7,16 @@ $(document).ready(function(){
 
 
 /*======= Scroll to About Us ========*/
-    $("a[href='#bottom']").click(function() {
+    $("a[href='#aboutUs']").click(function() {
         $("html, body").animate({scrollTop: $(".aboutUs").offset().top}, 'slow');
       });
 
 
+/*======= Scroll to Priducts ========*/
+$("a[href='#service']").click(function() {
+    $("html, body").animate({scrollTop: $(".sampleService").offset().top}, 'slow');
+  });
 
-    //   $('nav ul li').click(function(){
-    //     $(this).find('ul>li').stop().slideToggle(400);
-    // });
+
 });
     
